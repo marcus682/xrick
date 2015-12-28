@@ -89,6 +89,8 @@ depend:
 install:
 	install -m 0755 xrick /usr/games
 	install -m 0644 README /usr/share/doc/xrick
+	mkdir -p /usr/share/xrick
+	install -m 0644 data.zip /usr/share/xrick
 	install -m 0644 src/xrick.png /usr/share/icons/hicolor/32x32
 	install -m 0644 xrick.desktop /usr/share/applications
 	install -m 0644 xrick.6.gz /usr/share/man/man6

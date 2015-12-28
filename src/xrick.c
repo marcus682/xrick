@@ -13,7 +13,6 @@
 
 #include "system.h"
 #include "game.h"
-
 #include <SDL.h>
 
 /*
@@ -26,7 +25,7 @@ main(int argc, char *argv[])
 	if (sysarg_args_data)
 		data_setpath(sysarg_args_data);
 	else
-		data_setpath("data.zip");
+		data_setpath("/usr/share/xrick/data.zip");
 	game_run();
 	data_closepath();
 	sys_shutdown();
