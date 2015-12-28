@@ -65,7 +65,7 @@ XOBJ=xrick.res
 endif
 
 #
-# Rules
+# Rules
 #
 
 all:
@@ -86,4 +86,12 @@ clean:
 depend:
 	$(MAKE) -C src depend
 
+install:
+	install -m 0755 xrick /usr/games
+	install -m 0644 README /usr/share/doc/xrick
+	install -m 0644 src/xrick.png /usr/share/icons/hicolor/32x32
+	install -m 0644 xrick.desktop /usr/share/applications
+	install -m 0644 xrick.6.gz /usr/share/man/man6
+
+.PHONY: install
 # eof
